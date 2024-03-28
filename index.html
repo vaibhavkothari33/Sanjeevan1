@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PeerChat</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
+</head>
+<body>
+    <section id="demos" class="invisible">
+    <div id="liveView" class="videoView">
+        <button id="webcamButton" class="mdc-button mdc-button--raised">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label">ENABLE PREDICTIONS</span>
+        </button>
+
+
+        <!-- <div style="position: absolute; left: 0px; top: 0px;" class="indexx">  -->
+        <div style="position: relative;">
+            <!-- <video id="webcam" autoplay playsinline></video> -->
+            
+
+                <!-- <video class="video-player " id="user-1 " autoplay playsinline></video> -->
+                <video  id="webcam" autoplay playsinline></video>
+                <!-- <video class="video-player webcam" id="user-2 " autoplay playsinline></video> -->
+            
+            <canvas class="output_canvas" id="output_canvas" width="450" height="720" style="position: absolute; left: 0px; top: 0px;"></canvas>
+            <p id='gesture_output' class="output">
+            </div>
+        </div>
+    </section>
+    
+
+
+    <div id="videos">
+        <video class="video-player" id="user-1" autoplay playsinline></video>
+        <video class="video-player" id="user-2" autoplay playsinline></video>
+    </div>
+
+    <div id="controls">
+
+        <div class="control-container" id="camera-btn">
+            <img src="icons/camera.png" />
+        </div>
+
+        <div class="control-container" id="mic-btn">
+            <img src="icons/mic.png" />
+        </div>
+
+        <div class="control-container" id="screen-share-btn">
+            <img src="icons/invite.png" />
+            <!-- <i class="fa-solid fa-presentation-screen"><i class="fa-solid fa-presentation-screen"></i></i> -->
+            
+        </div>
+        
+        <a href="lobby.html">
+            <div class="control-container" id="leave-btn">
+                <img src="icons/phone.png" />
+            </div>
+        </a>
+
+        
+    </div>
+    
+</body>
+<script defer type="module" src="script.js"></script>
+<script  defer src='agora-rtm-sdk-1.4.4.js'></script>
+<script defer src='main.js'></script>
+</html>
